@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <mapper namespace="com.user.dao.UserDAO"> -->
+<mapper namespace="UserDAO">
+	<insert id="insertUser" parameterType="com.user.pojo.User" keyProperty="id">
+		insert
+		into user(state,nickname)
+		values(#{state},#{nickname})
+	</insert>
+	<select id="findUser" resultType="int" parameterType="hashMap">
+		select count(*) as num fromuser
+
+	</select>
+</mapper>
